@@ -1,7 +1,6 @@
 ---
 layout:    page
-permalink: "/Science"
+permalink: "/Research"
 weight:    2
-menutitle: Science
-title:     Research
+menutitle: Research
 ---
