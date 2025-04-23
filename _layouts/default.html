@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
+{% include head.html %}
+
+<body class="home-template">
+    <div class="site-wrapper">
+        {% include header.html %}
+        {{ content }}
+        <footer class="post-footer">
+            {% include authorinfo.html param=page.author %}
+        </footer>
+        {% include footer.html %}
+    </div>
+</body>
+
+{% include photoswipe.html %}
+{% include post_scripts.html %}
+{% include global.html %}
+</html>
