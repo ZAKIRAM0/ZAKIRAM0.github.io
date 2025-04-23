@@ -1,5 +1,6 @@
 ---
-layout: about
-permalink: "/cv"
-title: CV
+layout:    page
+permalink: "/CV"
+weight:    3
+menutitle: CV
 ---
