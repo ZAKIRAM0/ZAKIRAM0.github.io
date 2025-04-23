@@ -1,6 +1,6 @@
 ---
 layout:    page
 permalink: "/About me"
-weight:    2
+weight:    4
 menutitle: About me
 ---
