@@ -9,6 +9,3 @@ Installation instructions, features, previews and more can be found in the **[Gi
 
 [![](https://raw.githubusercontent.com/jwillmer/jekyllDecent/gh-pages/media/img/2016-06-08-Readme-front-page-previewe.jpg)](https://jwillmer.github.io/jekyllDecent)
 
-# Awesome-CV
-- This CV is based on the template originally created by Claud D. Park ([GitHub](https://github.com/posquit0/Awesome-CV)) but has been modified for this website by Vel.
-- It was downloaded from [Awesome Resume/CV and Cover Letter](https://www.latextemplates.com/template/awesome-resume-cv).
