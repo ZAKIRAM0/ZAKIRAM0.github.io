@@ -24,3 +24,12 @@
 @import '404';
 @import "prism";
 @import 'override';
+body {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
