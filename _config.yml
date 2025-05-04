@@ -8,9 +8,7 @@
 # Site settings
 title:            Zirui Zhang
 subtitle:         Symphony of Existence
-.subtitle {
-    font-family: "Great Vibes', cursive"
-}
+
 description:      ~ Welcome to My homepage ~
 keywords:         demo theme example github jekyll features
 language:         "en" # default language of the blog. Language codes: http://www.w3schools.com/tags/ref_language_codes.asp
