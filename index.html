@@ -2,62 +2,86 @@
 layout: default
 ---
 
-<!--
-<div class=Intro>
-    <p style = "text-align:justify">
-      
-    </p>
-</div>
--->
-<!--</br>
-
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>HomePage</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>HomePage</title>
 
-        h2 {
-            font-family: 'Great Vibes', cursive;
-            font-weight: 700;
-        }
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-weight: 700;
+      /* center every H2 */
+      text-align: center;
+      margin: 40px 0;
+    }
 
-        .content {
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-        }
-    </style>
+    /* flex row for your intro */
+    .intro-row {
+      display: flex;
+      justify-content: flex-start;   /* stick items to left */
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 900px;               /* widen the container */
+      margin: 0 auto 60px;            /* center container on page */
+      padding: 0 20px;
+    }
+
+    /* make the image fill its cell up to a big max width */
+    .profile-photo {
+      flex: 0 0 auto;                 /* do not stretch */
+      width: 100%;                    
+      max-width: 600px;               /* ↑ bump this up for a bigger picture */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* text sits to the right and fills remaining space */
+    .profile-text {
+      flex: 1;                        
+      text-align: left;
+      line-height: 1.6;
+    }
+  </style>
 </head>
-<div class="mat-elevation-z3" style="text-align:center;">
-</div>
 
-<h2>====== Hi~ ======</h2>
+<body>
 
+  <!-- Hi heading stays centered -->
+  <h2>====== Hi~ ======</h2>
 
-<div class="content" style="display: flex; justify-content: space-around; align-items: flex-start; margin: 20px auto; max-width: 800px; gap: 20px;">
+  <!-- Flex container: photo on left, text on right -->
+  <div class="intro-row">
+    <img
+      class="profile-photo"
+      src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
+      alt="Personal Image"
+    />
 
-    <div style="flex: 1; display: flex; justify-content: center; text-align: center;">
-        <img src="{{ '/assets/page/Me.jpeg' | absolute_url }}" 
-             style="width: 65%; max-width: 550px; height: auto; border-radius: 10px; margin-bottom: 10px;" 
-             alt="Personal Image" />
+    <div class="profile-text">
+      <p>
+        I am a Junior student majoring in Physics at Sichuan University, China.
+        Currently, I'm a visiting student at UC Berkeley, working on Host Galaxy
+        analysis of TDE tutored by
+        <b><a href="https://yaoyuhan.github.io/">Yuhan Yao</a></b>.
+      </p>
     </div>
+  </div>
 
-    <div style="flex: 2; max-width: 400px; text-align: left; line-height: 1.6;">
-        <p style="margin: 0;">
-            I am a Junior student majoring in Physics at Sichuan University, China.<br>
-            Currently, I'm a visiting student at UC Berkeley, working on Host Galaxy analysis of TDE tutored by 
-            <b><a href="https://yaoyuhan.github.io/">Yuhan Yao</a></b>.
-        </p>
-    </div>
-</div>
+    
 <div class="mat-elevation-z3" style = "text-align:center;">
     </div>
        <h2>======  Region of Interests  ======</h2>
