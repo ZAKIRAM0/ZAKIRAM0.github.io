@@ -16,46 +16,46 @@ layout: default
     rel="stylesheet"
   />
   <title>HomePage</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
 
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    h2 {
-      font-family: 'Great Vibes', cursive;
-      font-weight: 700;
-      /* center every H2 */
-      text-align: center;
-      margin: 40px 0;
-    }
+  /* Center every H2, full‑width */
+  h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+  }
 
-    /* flex row for your intro */
-    .intro-row {
-      display: flex;
-      justify-content: flex-start;   /* stick items to left */
-      align-items: flex-start;
-      gap: 20px;
-      max-width: 900px;               /* widen the container */
-      margin: 0 auto 60px;            /* center container on page */
-      padding: 0 20px;
-    }
+  /* Container for intro row */
+  .intro-row {
+    display: flex;
+    justify-content: flex-start;  /* keep items on left */
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 60px;           /* center the container itself */
+    padding: 0 20px;
+  }
 
-    /* make the image fill its cell up to a big max width */
-    .profile-photo {
-      flex: 0 0 auto;                 /* do not stretch */
-      width: 100%;                    
-      max-width: 600px;               /* ↑ bump this up for a bigger picture */
-      height: auto;
-      border-radius: 10px;
-    }
+  /* Smaller photo: cap at 250px wide */
+  .profile-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;              /* ↓ tweak this down until you like the size */
+    height: auto;
+    border-radius: 10px;
+  }
 
-    /* text sits to the right and fills remaining space */
-    .profile-text {
-      flex: 1;                        
-      text-align: left;
-      line-height: 1.6;
-    }
-  </style>
+  .profile-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+  }
+</style>
+
 </head>
 
 <body>
