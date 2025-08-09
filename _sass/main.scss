@@ -66,6 +66,13 @@
             line-height: 2;
             text-decoration: none;
             text-shadow: 1px 1px 5px rgba($color-black, 0.3);
+            
+            .en {
+                font-family: 'Merriweather', serif;
+            }
+            .zh {
+                font-family: 'STXingkai', 'KaiTi', '行书', serif;
+            }
         }
     }
 
