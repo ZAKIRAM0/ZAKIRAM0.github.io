@@ -1,14 +1,14 @@
 ---
-layout:    page
+layout:    page-with-sidebar
 permalink: "/publications"
 weight:    3
-menutitle: Publications
+menutitle: Lead_Papers
 ---
 
 ---
 <div style="width: 80%; margin: 0 auto;">
 
-<h2>eROSITA-RU Selected Tidal Disruption Events: Host Galaxy Properties and Spectroscopic analysis</h2>
+<h2>eROSITA-RU Selected Tidal Disruption Events: Host Galaxy Properties and Spectroscopic Analysis</h2>
 <h3>2025 - UC Berkeley, TRex Team, <strong>Supervisor:</strong> <a href="https://yaoyuhan.github.io/">Yuhan Yao</a></h3>
 
 <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bff; margin: 20px 0;">
@@ -17,7 +17,7 @@ menutitle: Publications
 
 </div>
 
-<div style="background-color:rgb(235, 217, 247); padding: 15px; border-left: 4px solidrgb(161, 62, 226); margin: 20px 0;">
+<div style="background-color:rgb(235, 217, 247); padding: 15px; border-left: 4px solid rgb(161, 62, 226); margin: 20px 0;">
 
 <h4 style="color:rgb(130, 25, 144); margin-top: 0;">Key Contributions</h4>
 
@@ -64,12 +64,19 @@ menutitle: Publications
 
 </div>
 
-<div style="background-color:rgb(223, 247, 229); padding: 15px; border-left: 4px solidrgb(83, 237, 119); margin: 20px 0;">
+<div style="background-color:rgb(223, 247, 229); padding: 15px; border-left: 4px solid rgb(2, 149, 36); margin: 20px 0;">
 
 <h4 style="color:rgb(44, 168, 73); margin-top: 0;">Publication Status</h4>
 <p style="margin-bottom: 5px;"><strong>Status:</strong> In preparation for <em>Astronomy & Astrophysics</em></p>
 <p style="margin-bottom: 0;"><strong>Collaborators:</strong> Yuhan Yao (UC Berkeley / Miller Institute), and the eROSITA-RU collaboration</p>
 
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="{{ '/assets/publications/tde-host-galaxies.png' | absolute_url }}" alt="TDE Host Galaxy Properties" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p style="font-size: 12px; color: #666; margin-top: 8px; font-style: italic;">
+    [TDE Host Galaxy Image Citation - Replace with actual citation]
+  </p>
 </div>
 
 

@@ -1,0 +1,175 @@
+---
+layout: default
+---
+
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 250px;            /* Add left margin to account for fixed image */
+  }
+
+  /* Fixed photo in top-left corner */
+  .profile-photo {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    transform: none;
+    width: 220px;                  /* Larger size for more prominence */
+    height: auto;
+    border-radius: 10px;
+    z-index: 1000;                 /* Ensure it stays on top */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
+  }
+
+  /* Gray border line to separate fixed section */
+  .border-line {
+    position: fixed;
+    top: 0;
+    left: 250px;                   /* Position right next to the image */
+    width: 5px;                   /* Border thickness */
+    height: 10000px;               /* Very tall to cover entire website */
+    background-color: #d3d3d3;     /* Light gray color */
+    z-index: 999;                  /* Behind the image but above content */
+  }
+
+  /* Fixed text section in left region */
+  .fixed-text-section {
+    position: fixed;
+    top: 320px;                    /* Position below the profile image - same as homepage */
+    left: 15px;                    /* Align with the image */
+    width: 220px;                  /* Same width as the image */
+    z-index: 1000;                 /* Same level as the image */
+    color: #333;                   /* Dark text color */
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .fixed-text-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: #ac66d7;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .fixed-text-section p {
+    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .fixed-text-section p strong {
+    font-size: 22px;               /* Larger name text */
+    font-weight: bold;
+    color: #2c3e50;                /* Darker color for better visibility */
+  }
+
+  .fixed-text-section a {
+    color: blue;                 /* Use default link color */
+    text-decoration: none;
+  }
+
+  .fixed-text-section a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main content styling */
+  .main-content {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .main-content h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .main-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .profile-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      margin-left: 0;               /* Remove left margin on mobile */
+    }
+    
+    .profile-photo {
+      position: static;
+      transform: none;
+      width: 150px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    
+    .border-line {
+      display: none;
+    }
+    
+    .fixed-text-section {
+      position: static;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .main-content {
+      padding: 0 20px;
+    }
+  }
+</style>
+
+<!-- Fixed profile image -->
+<img
+  class="profile-photo"
+  src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
+  alt="Personal Image"
+/>
+
+<!-- Gray border line -->
+<div class="border-line"></div>
+
+<!-- Fixed text section in left region -->
+<div class="fixed-text-section">
+  <h3> </h3>
+  <p><img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="Name Icon" style="width: 20px; height: 20px; vertical-align: baseline; display: inline-block;"><strong>Zirui Zhang | 张子睿</strong></p>
+  <p>Physics Major<br>Sichuan University</p>
+  
+  <h3>Interests</h3>
+  <p>High Energy Astronomy<br>Tidal Disruption Events<br>Host Galaxy Analysis</p>
+  
+  <h3>Contact</h3>
+  <p>
+    <a href="mailto:929cosmo_zhangzirui@gmail.com" target="_blank">Email</a><br>
+    <a href="https://github.com/ZAKIRAM0" target="_blank">GitHub</a><br>
+  </p>
+  
+  <h3>Visitor Map</h3>
+  <div style="width: 80px; height: 80px; margin: 0 auto;">
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
+  </div>
+</div>
+
+<main class="main-content" role="main">
+    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header short-diver">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>           
+        </header>
+        <section class="post-content short-diver" itemprop="articleBody">
+            {{content}}
+        </section>
+    </article>
+</main>
+
+{% include photoswipe.html %}
+{% include post_scripts.html %}

@@ -22,7 +22,26 @@
 	{% include twitter-meta.html %}
 	{% include citation_meta.html %}
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/css/screen.css" | absolute_url }}">
+    
+    <!-- Global font styling for consistency -->
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif !important;
+      }
+      
+      /* Unify cover image height across all pages */
+      .main-header {
+        padding-top: 12rem !important;  /* Same height as homepage */
+        min-height: 220px !important;   /* Ensure minimum height is maintained */
+      }
+      
+      /* Move subtitle lower */
+      .page-description {
+        margin-top: 10rem !important;    /* Add space above the subtitle */
+      }
+    </style>
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url  }}">
 
     <!-- https://github.com/joshbuchea/HEAD -->

@@ -19,6 +19,12 @@ layout: default
 <style>
   body {
     font-family: 'Roboto', sans-serif;
+    margin-left: 250px;            /* Add left margin to account for fixed image */
+  }
+
+  /* Make cover image taller */
+  .main-header {
+    padding-top: 12rem !important;  /* Increase from 8rem to 12rem for taller cover */
   }
 
   /* Center every H2, full‑width */
@@ -29,24 +35,76 @@ layout: default
     margin: 40px 0;
   }
 
-  /* Container for intro row */
+  /* Container for intro row - centered content */
   .intro-row {
-    display: flex;
-    justify-content: flex-start;  /* keep items on left */
-    align-items: flex-start;
-    gap: 20px;
-    max-width: 900px;
+    display: block;
+    max-width: 920px;
     margin: 0 auto 60px;           /* center the container itself */
-    padding: 0 20px;
+    padding: 0 20px;               /* Remove left padding, keep normal padding */
   }
 
-  /* Smaller photo: cap at 250px wide */
+  /* Fixed photo in top-left corner */
   .profile-photo {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 250px;              /* ↓ tweak this down until you like the size */
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    transform: none;
+    width: 220px;                  /* Larger size for more prominence */
     height: auto;
     border-radius: 10px;
+    z-index: 1000;                 /* Ensure it stays on top */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
+  }
+
+  /* Gray border line to separate fixed section */
+  .border-line {
+    position: fixed;
+    top: 0;
+    left: 250px;                   /* Position right next to the image */
+    width: 5px;                   /* Border thickness */
+    height: 10000px;               /* Very tall to cover entire website */
+    background-color: #d3d3d3;     /* Light gray color */
+    z-index: 999;                  /* Behind the image but above content */
+  }
+
+  /* Fixed text section in left region */
+  .fixed-text-section {
+    position: fixed;
+    top: 320px;                    /* Position below the profile image */
+    left: 15px;                    /* Align with the image */
+    width: 220px;                  /* Same width as the image */
+    z-index: 1000;                 /* Same level as the image */
+    color: #333;                   /* Dark text color */
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .fixed-text-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: #ac66d7;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .fixed-text-section p {
+    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .fixed-text-section p strong {
+    font-size: 22px;               /* Larger name text */
+    font-weight: bold;
+    color: #2c3e50;                /* Darker color for better visibility */
+  }
+
+  .fixed-text-section a {
+    color: blue;                 /* Use default link color */
+    text-decoration: none;
+  }
+
+  .fixed-text-section a:hover {
+    text-decoration: underline;
   }
 
   .profile-text {
@@ -55,17 +113,60 @@ layout: default
     line-height: 1.6;
   }
   a {
-    color: #0074d9;
+    color: #ac66d7;
     text-decoration: underline;
   }
   .name {
     margin-bottom: 0.3em;
+  }
+
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    body {
+      margin-left: 0;               /* Remove left margin on mobile */
+    }
+    
+    .profile-photo {
+      position: static;
+      transform: none;
+      width: 150px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    
+    .intro-row {
+      padding: 0 20px;
+    }
   }
 </style>
 
 </head>
 
 <body>
+
+  <!-- Gray border line -->
+  <div class="border-line"></div>
+
+  <!-- Fixed text section in left region -->
+  <div class="fixed-text-section">
+    <h3> </h3>
+    <p><img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="Name Icon" style="width: 20px; height: 20px; vertical-align: baseline; display: inline-block;"><strong>Zirui Zhang | 张子睿</strong></p>
+      <p>Physics Major<br>Sichuan University</p>
+    
+    <h3>Interests</h3>
+    <p>High Energy Astrophysics<br>Time Domain Astronomy</p>
+    
+    <h3>Contact</h3>
+    <p>
+      <a href="mailto:929cosmo_zhangzirui@gmail.com" target="_blank">Email</a><br>
+      <a href="https://github.com/ZAKIRAM0" target="_blank">GitHub</a><br>
+    </p>
+    
+    <h3>Visitor Map</h3>
+    <div style="width: 80px; height: 80px; margin: 0 auto;">
+        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
+    </div>
+  </div>
 
   <!-- Hi heading stays centered
   <h2>====== Hi~ ======</h2> -->
@@ -79,46 +180,46 @@ layout: default
     />
 
     <div class="profile-text">
-      <!-- This line displays the name "Zirui Zhang | 张子睿" in a large, bold, centered style. -->
-      <p style="font-size: 1.15em;">
-        Hi! I am a senior undergraduate student majoring in Physics at Sichuan University, China.
+      <!-- General Introduction -->
+      <p style="font-size: 17px; line-height: 1.4; color: #333;">
+        Hi! I am a senior undergraduate student majoring in Physics at SCU.
         <br>
-        I was an exchange student at UC Berkeley, working on Host Galaxy analysis of TDE tutored
-        I'm always open to discussing interesting ideas—feel free to reach out!
+        I have broad interests on time-domain and high energy astronomy, with experience on black-hole transients, galaxy environments, and binary systems.
+        <br>
+        I'm open to discussing interesting ideas—feel free to reach out!
       </p>
-      <!-- </p>
-      <p style="text-align:center">
-      <a href="mailto:929cosmo_zhangzirui AT berkeley.edu">Email</a> &nbsp;/&nbsp;
-      <a href="https://github.com/ZAKIRAM0">Github</a>&nbsp;
-      </p> -->
+
+      <!-- News Section -->
+      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🔥 News</h3>
+      <p style="font-size: 15px; line-height: 1.4; color: #333;">
+        [Add your latest news and updates here]
+      </p>
+
+      <!-- Education Section -->
+      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">📖 Education</h3>
+        <p style="font-size: 15px; line-height: 1.4; color: #333;">
+          <em>2025.01 - 2025.08</em> &nbsp;&nbsp;&nbsp; Exchange student at UC Berkeley, USA
+          <br>
+          <em>2022.09 - 2026.06</em> &nbsp;&nbsp;&nbsp; B.S. in Physics, College of Physics and Wu Yuzhang Honors College, Sichuan University, China
+        </p>
+
+      <!-- Research Experience Section -->
+      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🛰️ Research Experience</h3>
+      <p style="font-size: 15px; line-height: 1.4; color: #333;">
+        <em>2025.01 - Present</em> &nbsp;&nbsp;&nbsp;TRex Team, UC Berkeley, USA         <br>
+        <em>2024.06 - 2025.03</em> &nbsp;&nbsp;&nbsp;GECAM Group, Institute of High Energy Physics(IHEP), Chinese Academy of Sciences, China            <br>
+        <em>2023.12 - 2024.05 </em> &nbsp;&nbsp;&nbsp;LHAASO Group, Institute of High Energy Physics(IHEP), Chinese Academy of Sciences, China             <br>
+        <em>2023.04 - 2023.12</em> &nbsp;&nbsp;&nbsp;Sichuan University, China
+
+      <!-- Where I'm From Section -->
+      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🌊 Where I'm From</h3>
+      <p style="font-size: 15px; line-height: 1.4; color: #333;">
+        [Add information about your background and origins here]
+      </p>
 
     </div>
   </div>
 
-    
-<div class="mat-elevation-z3" style = "text-align:center;">
-    </div>
-       <h2>======  Region of Interests  ======</h2>
-   </div>
-   <div class="content">
-       <ul>
-           High Energy Astronomy and Astrophysics
-           Theory-oriented Time domain Astronomy 
-     </ul>
-   </div>
-</div>
-
-<div class="mat-elevation-z3" style = "text-align:center;">
-    </div>
-       <h2>======  Contact me  ======</h2>
-   </div>
-   <div class="content">
-       <ul>
-           929cosmo_zhangzirui [at] gmail [dot] com <br>
-     </ul>
-   </div>
-</div>
-</div> 
 
 </body>
 </html>
