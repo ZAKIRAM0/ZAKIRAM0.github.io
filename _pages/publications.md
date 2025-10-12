@@ -6,16 +6,14 @@ menutitle: Lead_Papers
 ---
 
 ---
-<div style="width: 80%; margin: 0 auto;">
 
+<div style="width: 100%;">
 <h2>eROSITA-RU Selected Tidal Disruption Events: Host Galaxy Properties and Spectroscopic Analysis</h2>
 <h3>2025 - UC Berkeley, TRex Team, <strong>Supervisor:</strong> <a href="https://yaoyuhan.github.io/">Yuhan Yao</a></h3>
 
-<div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bff; margin: 20px 0;">
-
-<strong>Background:</strong> When a star wanders too close to a supermassive black hole, it can be torn apart by tidal forces, creating a spectacular astronomical phenomenon called a <strong>Tidal Disruption Event (TDE)</strong>. These rare transients produce bright flares in X-rays and optical wavelengths, offering unique windows into the properties of otherwise dormant black holes and their immediate environments. Understanding which types of galaxies host TDEs—and why—is crucial for constraining black hole demographics and galaxy evolution.
-
+<p>We present Keck/LRIS optical spectroscopy and multiwavelength analysis of 70 TDE candidates from eROSITA all-sky surveys, systematically classifying them using BPT/WHAN diagnostics and X-ray/optical luminosity correlations to identify 35 high-confidence (gold) and 20 lower-confidence (silver) TDEs after removing 15 AGN contaminants. We conduct host galaxy analysis, showing in our papers. We identify important spectroscopic diversity including some sources with transient He II λ4686 emission, and rare coronal-line TDEs with [Fe VII–XII] ionization emission, demonstrating the value of multi-epoch spectroscopy for robust TDE classification.</p>
 </div>
+
 
 <div style="background-color:rgb(235, 217, 247); padding: 15px; border-left: 4px solid rgb(161, 62, 226); margin: 20px 0;">
 
@@ -59,7 +57,7 @@ menutitle: Lead_Papers
 <li>Programming: Prospector, pPXF, FSPS, Dynesty, astropy</li>
 <li>Spectroscopic analysis and emission-line diagnostics</li>
 <li>Statistical modeling and Bayesian inference</li>
-<li>Large dataset management and cross-matching algorithms</li>
+<li>Large dataset management</li>
 </ul>
 
 </div>
@@ -75,7 +73,7 @@ menutitle: Lead_Papers
 <div style="text-align: center; margin: 30px 0;">
   <img src="{{ '/assets/publications/tde-host-galaxies.png' | absolute_url }}" alt="TDE Host Galaxy Properties" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="font-size: 12px; color: #666; margin-top: 8px; font-style: italic;">
-    [TDE Host Galaxy Image Citation - Replace with actual citation]
+    [TDE Host Galaxy Image, will be updated]
   </p>
 </div>
 
@@ -89,8 +87,6 @@ menutitle: Lead_Papers
 
 
 <a href="https://scholar.google.com/citations?hl=en&user=atRdtDAAAAAJ&view_op=list_works&citft=1&email_for_op=929cosmo_zhangzirui%40berkeley.edu&authuser=1&gmla=AIfU4H4PRZARB7WuTgpvW2tTBdJcU1eUTmVj4LDSjlxK37Tj0CFfUMzBcdXon5sXAVT8ljlriIewF5uy4wpribcXxKJMmb6-u6Ys-PKax5V5vT77CQxyMHDxqgCbTsT8FqN04OE64J2Xt5Y1wgOb2lH3KjeUSpzMC9tqqmBEAb70_jnt04Hng0Ue4PdxIPOsZzz3Eua0dxsJDj3qQHNefJ1Og6IVakdH5Fww201Sb68biCVo13rQdwMu1Nu2ev3GUrnacP_VW_uqFQaHFXk">Google Scholar</a>
-
-</div>
 
 
 
