@@ -24,7 +24,7 @@ I come from Pengshan(彭山), a serene district of Meishan(眉山) in Sichuan(�
 <div class="profile-text">
 <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;"> 🔥Role Model
 </h3>
-<img src="/assets/page/W.jpeg" alt="齐天大圣(from internet)" style="float: right; width: 160px; margin: 0 0 10px 15px; border-radius: 6px;" />
+<img src="/assets/page/W.jpeg" alt="齐天大圣(from internet)" style="float: right; width: 180px; margin: 0 0 10px 15px; border-radius: 6px;" />
 <p style="font-size: 15px; line-height: 1.4; color: #333;">
 Monkey King (Sun Wukong孙悟空), originating from the classic Chinese epic <em>Journey to the West</em> <br>
 For me, he is a representive of fearless curiosity, boundless imagination, and a touch of rebellion toward the unknown — yet beneath the courage lies a quiet solitude in the endless pursuit of his own destiny.</p>
