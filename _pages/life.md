@@ -8,7 +8,7 @@ menutitle: About me
 <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">✨ Hobbies</h3>
 <p style="font-size: 15px; line-height: 1.4; color: #333;">
 Music <br>
-
+Read: history, philosophy
 Sports: badmiton, hiking, jogging, ping-pong, tennis
 
 </p>
