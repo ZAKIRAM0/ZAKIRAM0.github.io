@@ -21,9 +21,6 @@ I come from Pengshan(彭山), a serene district of Meishan(眉山) in Sichuan(�
 </p>
 </div>
 
-
-Role Model
-
 <div class="profile-text">
 <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;"> Role Model
 </h3>
