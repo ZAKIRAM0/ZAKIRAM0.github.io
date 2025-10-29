@@ -32,7 +32,7 @@ menutitle: Lead_Papers
 <h5 style="color: #495057; margin-bottom: 10px;">2. Host Galaxy Demographics</h5>
 <ul style="margin-bottom: 0;">
 <li>Performed comprehensive <strong>SED fitting</strong> with Prospector for all 70 candidates twice: with transient-contaminated spectral regions masked and unmasked, to derive stellar properties as well as systematic check if there are prominent transient feature in the spectra.</li>
-<li>Found that X-ray-selected TDE hosts preferentially reside in <strong>"green valley" galaxies</strong>—systems transitioning between star-forming and quiescent phases</li>
+<li>Found that X-ray-selected TDE hosts slightly preferentially reside in <strong>"green valley" galaxies</strong>—systems transitioning between star-forming and quiescent phases</li>
 <li>Demonstrated that X-ray TDE hosts show broader diversity than optical samples, consistent with previous studies</li>
 <li>Most hosts fall below the star-forming main sequence, consistent with X-ray selection biases against dusty star-forming galaxies</li>
 </ul>
@@ -49,19 +49,6 @@ menutitle: Lead_Papers
 
 </div>
 
-<div style="background-color: #e7f3ff; padding: 15px; border-left: 4px solid #17a2b8; margin: 20px 0;">
-
-<h4 style="color: #0c5460; margin-top: 0;">Technical Approach</h4>
-<ul style="margin-bottom: 0;">
-<li>Multi-wavelength astronomical data analysis (X-ray in 0.3-2.3 kev, optical, UV, IR)</li>
-<li>Programming: Prospector, pPXF, FSPS, Dynesty, astropy</li>
-<li>Spectroscopic analysis and emission-line diagnostics</li>
-<li>Statistical modeling and Bayesian inference</li>
-<li>Large dataset management</li>
-</ul>
-
-</div>
-
 <div style="background-color:rgb(223, 247, 229); padding: 15px; border-left: 4px solid rgb(2, 149, 36); margin: 20px 0;">
 
 <h4 style="color:rgb(44, 168, 73); margin-top: 0;">Publication Status</h4>
@@ -70,12 +57,12 @@ menutitle: Lead_Papers
 
 </div>
 
-<div style="text-align: center; margin: 30px 0;">
+<!-- <div style="text-align: center; margin: 30px 0;">
   <img src="{{ '/assets/publications/tde-host-galaxies.png' | absolute_url }}" alt="TDE Host Galaxy Properties" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="font-size: 12px; color: #666; margin-top: 8px; font-style: italic;">
     [TDE Host Galaxy Image, will be updated]
   </p>
-</div>
+</div> -->
 
 
 
