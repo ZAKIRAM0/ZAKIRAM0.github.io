@@ -12,6 +12,8 @@ When a star wanders too close to a supermassive black hole, it can be torn apart
 
 Recently, I found <strong>coronal TDEs</strong>—events are quite interesting, which exhibit highly ionized iron emission lines ([Fe&nbsp;VII–XIV])—which likely arise when the intense radiation from a TDE photoionizes surrounding circumnuclear gas. <br><br>
 
+Another intriguing subset is partial TDEs, in which the star is only partially stripped during its close encounter, allowing multiple passages and leading to recurrent mass transfer episodes. These events may serve as natural bridges between classical single-passage TDEs and longer-lived accretion phenomena. My undergraduate thesis would focus on the the nature and origins of long-duration high-energy transients, mainly focusing on ULGRB and TDE. <br><br>
+
 I am also exploring the potential connection between <strong>TDEs and quasi-periodic eruptions (QPEs)</strong>, which may originate from the accretion disks formed after partial disruptions or repeated stellar passages. Some recent papers indicate coronal TDEs may trigger QPE, which I do hope to dive in, to figure out  how transient accretion processes evolve and whether they can transition into recurrent QPE-like behavior.
 </p>
 
