@@ -31,3 +31,10 @@ Beyond galactic nuclei, I am also interested in <strong>compact binary mergers</
 Together, these research directions aim to answer a broader question: <em>How do compact objects—black holes and neutron stars—shape the lifecycle of galaxies through transient, high-energy processes?</em>
 </p>
 </div>
+
+
+<h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">AI for Astronomy (Future Direction)</h3>
+<p style="font-size: 15px; line-height: 1.4; color: #333;">
+Looking ahead, I am eager to explore the integration of <strong>AI and machine learning</strong> in time-domain and high-energy astrophysics. Let's find out! <br><br>
+
+</p>
