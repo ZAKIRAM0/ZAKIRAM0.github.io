@@ -28,25 +28,26 @@ menutitle: Lead_Papers
 </ul>
 </div>
 
-<!-- <div style="margin-bottom: 20px;">
+<div style="margin-bottom: 20px;">
 <h5 style="color: #495057; margin-bottom: 10px;">2. Host Galaxy Demographics</h5>
 <ul style="margin-bottom: 0;">
 <li>Performed comprehensive <strong>SED fitting</strong> with Prospector for all 70 candidates twice: with transient-contaminated spectral regions masked and unmasked, to derive stellar properties as well as systematic check if there are prominent transient feature in the spectra.</li>
-<li>Found that X-ray-selected TDE hosts slightly preferentially reside in <strong>"green valley" galaxies</strong>—systems transitioning between star-forming and quiescent phases</li>
+Results will be updated after our paper is officially published.
+<!-- <li>Found that X-ray-selected TDE hosts slightly preferentially reside in <strong>"green valley" galaxies</strong>—systems transitioning between star-forming and quiescent phases</li>
 <li>Demonstrated that X-ray TDE hosts show broader diversity than optical samples, consistent with previous studies</li>
-<li>Most hosts fall below the star-forming main sequence, consistent with X-ray selection biases against dusty star-forming galaxies</li>
+<li>Most hosts fall below the star-forming main sequence, consistent with X-ray selection biases against dusty star-forming galaxies</li> -->
 </ul>
-</div>
+</div> -->
 
-<div style="margin-bottom: 0;">
+<!-- <div style="margin-bottom: 0;">
 <h5 style="color: #495057; margin-bottom: 10px;">3. Transient Spectroscopic Features</h5>
 <ul style="margin-bottom: 0;">
 <li>Systematically identified <strong>4 TDE-He sources</strong> exhibiting prominent transient He II λ4686 emission from the Prospector fitting results, a key spectroscopic signature confirming TDEs</li>
 <li>Discovered <strong>3 rare coronal-line TDEs</strong> with extreme high-ionization emission ([Fe VII–XII]), indicative of shock-heated or outflow-ionized gas in dense nuclear environments</li>
 <li>Captured the spectroscopic evolution of a transient broad Hα component over 3 months (SRGe J234034.7+293400) using multi-epoch DESI and Keck observations, providing direct observational evidence of temporal variability that distinguishes TDEs from persistent AGN</li>
 </ul>
-</div> -->
-
+</div>
+ -->
 </div>
 
 <div style="background-color:rgb(223, 247, 229); padding: 15px; border-left: 4px solid rgb(2, 149, 36); margin: 20px 0;">
