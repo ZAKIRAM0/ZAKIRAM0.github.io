@@ -25,22 +25,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/css/screen.css" | absolute_url }}">
     
-    <!-- Global font styling for consistency -->
+    <!-- Global font styling and homepage header behavior -->
     <style>
       body {
         font-family: 'Roboto', sans-serif !important;
       }
-      
-      /* Unify cover image height across all pages */
+      {% if page.url == "/" %}
+      /* Hide the old wallpaper header on the homepage */
       .main-header {
-        padding-top: 12rem !important;  /* Same height as homepage */
-        min-height: 220px !important;   /* Ensure minimum height is maintained */
+        display: none !important;
       }
-      
-      /* Move subtitle lower */
+      {% else %}
+      /* Keep header height on inner pages */
+      .main-header {
+        padding-top: 12rem !important;
+        min-height: 220px !important;
+      }
       .page-description {
-        margin-top: 10rem !important;    /* Add space above the subtitle */
+        margin-top: 10rem !important;
       }
+      {% endif %}
     </style>
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url  }}">
 
