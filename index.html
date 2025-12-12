@@ -3,6 +3,28 @@ layout: default
 ---
 
 <style>
+  /* Top navigation bar */
+  .top-nav{
+    max-width: 1420px;
+    margin: 16px auto 0;
+    padding: 0 18px 6px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap: 18px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .top-nav a{
+    text-decoration:none;
+    color: var(--muted);
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  .top-nav a:hover{
+    color: var(--accent);
+  }
+
   :root{
     --accent:#ac66d7;
     --accent2:#6ea8fe;
@@ -296,6 +318,13 @@ layout: default
     margin-top: 6px !important;
   }
 </style>
+
+<nav class="top-nav">
+  <a href="{{ "/" | absolute_url }}">Home</a>
+  <a href="{{ "/Research" | absolute_url }}">Research</a>
+  <a href="{{ "/publications" | absolute_url }}">Lead Papers</a>
+  <a href="{{ "/About me" | absolute_url }}">About me</a>
+</nav>
 
 <div class="page-wrap">
 
