@@ -25,13 +25,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/css/screen.css" | absolute_url }}">
     
-    <!-- Global font styling and homepage header behavior -->
+    <!-- Global font styling and header behavior -->
     <style>
       body {
         font-family: 'Roboto', sans-serif !important;
       }
-      {% if page.url == "/" %}
-      /* Hide the old wallpaper header on the homepage */
+      {% if page.url == "/" or page.layout == "page-with-sidebar" %}
+      /* Hide the old wallpaper header on homepage and sidebar pages */
       .main-header {
         display: none !important;
       }

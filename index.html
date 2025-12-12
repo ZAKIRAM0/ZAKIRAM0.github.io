@@ -58,7 +58,7 @@ layout: default
   .sidebar{ position: sticky; top: 22px; }
 
   .sidebar-card{
-    background: rgba(255,255,255,.85);
+    background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
     backdrop-filter: blur(10px);
     border: 1px solid rgba(231,231,239,.9);
     border-radius: var(--radius);
@@ -68,7 +68,6 @@ layout: default
 
   .side-top{
     padding: 12px;
-    background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
     border-bottom: 1px solid rgba(231,231,239,.9);
   }
 
@@ -90,7 +89,7 @@ layout: default
 
   .side-body{ padding: 12px 14px 14px; }
 
-  /* Name block with same gradient as avatar background */
+  /* Name block, sits on same gradient sidebar background */
   .name-row{
     display:flex;
     align-items:center;
@@ -98,8 +97,8 @@ layout: default
     gap:8px;
     margin-top: 8px;
     padding: 8px 10px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
+    border-radius: 0;
+    background: transparent;
   }
   .name-row img{ width: 18px; height: 18px; }
   .name{
@@ -132,12 +131,27 @@ layout: default
   }
 
   .side-block{
-    margin-top: 12px;
+    margin-top: 16px;
     padding-top: 10px;
-    border-top: 1px solid rgba(231,231,239,.9);
+    position: relative;
+  }
+  .side-block::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: linear-gradient(to right,
+      rgba(0, 4, 9, 0),      /* transparent gray */
+      rgba(52, 56, 64, 0.4),
+      rgba(148,163,184,1),      /* much darker center */
+      rgba(52, 56, 64, 0.4),
+      rgba(0, 4, 9, 0)       /* transparent gray */
+    );
   }
   .side-title{
-    margin: 0 0 8px 0;
+    margin: 0 0 1px 0;
     font-size: 16px;
     font-weight: 800;
     color: var(--accent);
@@ -152,7 +166,7 @@ layout: default
 
   .btn-row{
     display:flex;
-    gap: 8px;
+    gap: 1px;
     flex-wrap: wrap;
   }
   .btn{
@@ -160,20 +174,20 @@ layout: default
     align-items:center;
     gap: 8px;
     padding: 8px 10px;
-    border-radius: 12px;
-    border: 1px solid rgba(231,231,239,.95);
-    background: rgba(255,255,255,.85);
+    border-radius: 0;
+    border: none;
+    background: transparent;
     color: var(--accent);
-    font-weight: 800;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 14px;
     text-decoration: none;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   }
   .btn:hover{
     transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(17,24,39,.08);
-    background: rgba(255,255,255,.96);
-    text-decoration: none;
+    box-shadow: none;
+    background: transparent;
+    text-decoration: underline;
   }
 
   .visitor{
@@ -217,9 +231,9 @@ layout: default
     content:"";
     position:absolute;
     inset:-2px;
-    background: linear-gradient(135deg, rgba(172,102,215,.14), rgba(110,168,254,.12));
-    filter: blur(18px);
-    opacity: .9;
+    background: linear-gradient(135deg, rgba(110,168,254,.16), rgba(172,102,215,.18));
+    filter: blur(17px);
+    opacity: .96;
     z-index:0;
   }
   .hero > *{ position: relative; z-index:1; }
@@ -279,28 +293,28 @@ layout: default
     padding:0;
     margin:0;
     display:grid;
-    gap: 10px;
+    row-gap: 6px;
   }
   .timeline li{
     display:grid;
-    grid-template-columns: 96px 1fr; /* slightly narrower date column */
-    gap: 10px;
-    align-items:start;
-    padding: 10px 12px;
-    border-radius: 14px;
-    border: 1px solid rgba(231,231,239,.95);
-    background: rgba(255,255,255,.75);
-    transition: transform .15s ease, box-shadow .15s ease;
+    grid-template-columns: 150px 1fr; /* a bit wider date column */
+    column-gap: 12px;
+    align-items:flex-start;
+    padding: 2px 0;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    transition: transform .15s ease;
   }
   .timeline li:hover{
     transform: translateY(-1px);
-    box-shadow: 0 12px 26px rgba(17,24,39,.08);
   }
 
   .date{
     color: var(--muted);
     font-weight: 800;
     white-space: nowrap;
+    text-align: right;
     font-size: 15.5px;
   }
   .item{
@@ -313,20 +327,12 @@ layout: default
     .page-wrap{ grid-template-columns: 1fr; }
     .sidebar{ position: relative; top:auto; }
   }
-  /* tighten timeline item vertical spacing */
-  .timeline li{
-    padding: 6px 0 !important;
-    margin: 0 !important;
-  }
-  .timeline li + li{
-    margin-top: 6px !important;
-  }
 </style>
 
 <nav class="top-nav">
   <a href="{{ "/" | absolute_url }}">Home</a>
   <a href="{{ "/Research" | absolute_url }}">Research</a>
-  <a href="{{ "/publications" | absolute_url }}">Lead Papers</a>
+    <a href="{{ "/publications" | absolute_url }}">Lead Paper</a>
   <a href="{{ "/About me" | absolute_url }}">About me</a>
 </nav>
 
@@ -396,7 +402,7 @@ layout: default
       </div>
     </section>
 
-    <section class="card">
+    <section class="card hero">
       <h3 class="sec-title"><span class="dot"></span>🔥 News</h3>
       <ul class="timeline">
         <li>
@@ -414,7 +420,7 @@ layout: default
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card hero">
       <h3 class="sec-title"><span class="dot"></span>📖 Education</h3>
       <ul class="timeline">
         <li>
@@ -428,7 +434,7 @@ layout: default
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card hero">
       <h3 class="sec-title"><span class="dot"></span>🛰️ Research Experience</h3>
       <ul class="timeline">
         <li>

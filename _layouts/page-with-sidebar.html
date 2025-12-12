@@ -3,173 +3,317 @@ layout: default
 ---
 
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 250px;            /* Add left margin to account for fixed image */
+  /* Top navigation bar (same as homepage) */
+  .top-nav{
+    max-width: 1420px;
+    margin: 16px auto 0;
+    padding: 0 18px 6px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap: 18px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .top-nav a{
+    text-decoration:none;
+    color: var(--muted);
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  .top-nav a:hover{
+    color: var(--accent);
   }
 
-  /* Fixed photo in top-left corner */
-  .profile-photo {
-    position: fixed;
-    top: 20px;
-    left: 15px;
-    transform: none;
-    width: 220px;                  /* Larger size for more prominence */
-    height: auto;
-    border-radius: 10px;
-    z-index: 1000;                 /* Ensure it stays on top */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
+  :root{
+    --accent:#ac66d7;
+    --accent2:#6ea8fe;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --bg:#f4f3ff;
+    --card:#ffffff;
+    --border:#e7e7ef;
+    --shadow: 0 10px 30px rgba(17, 24, 39, .07);
+    --radius:16px;
   }
 
-  /* Gray border line to separate fixed section */
-  .border-line {
-    position: fixed;
-    top: 0;
-    left: 250px;                   /* Position right next to the image */
-    width: 5px;                   /* Border thickness */
-    height: 10000px;               /* Very tall to cover entire website */
-    background-color: #d3d3d3;     /* Light gray color */
-    z-index: 999;                  /* Behind the image but above content */
+  html, body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Trebuchet MS", "KaiTi", "楷体", "STKaiti", "华文楷体", Arial, sans-serif !important;
+    font-size: 18px;
   }
 
-  /* Fixed text section in left region */
-  .fixed-text-section {
-    position: fixed;
-    top: 320px;                    /* Position below the profile image - same as homepage */
-    left: 15px;                    /* Align with the image */
-    width: 220px;                  /* Same width as the image */
-    z-index: 1000;                 /* Same level as the image */
-    color: #333;                   /* Dark text color */
-    font-size: 10px;
+  .page-wrap{
+    max-width: 1420px;
+    margin: 28px auto 60px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* Sidebar same as homepage */
+  .sidebar{ position: sticky; top: 22px; }
+
+  .sidebar-card{
+    background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231,231,239,.9);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .side-top{
+    padding: 12px;
+    border-bottom: 1px solid rgba(231,231,239,.9);
+  }
+
+  .avatar{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    border: 2px solid rgba(110,168,254,.45);
+    box-shadow: 0 10px 26px rgba(0,0,0,.10);
+    transform: translateZ(0);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .sidebar-card:hover .avatar{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.12);
+  }
+
+  .side-body{ padding: 12px 14px 14px; }
+
+  .name-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 0;
+    background: transparent;
+  }
+  .name-row img{ width: 18px; height: 18px; }
+  .name{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    text-align: center;
+  }
+  .sub{
+    margin-top: 6px;
+    font-size: 16px;
+    color: var(--muted);
     line-height: 1.4;
   }
 
-  .fixed-text-section h3 {
-    margin: 0 0 10px 0;
-    font-size: 15px;
-    color: #ac66d7;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+  .side-block{
+    margin-top: 16px;
+    padding-top: 10px;
+    position: relative;
+  }
+  .side-block::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: linear-gradient(to right,
+      rgba(0, 4, 9, 0),
+      rgba(52, 56, 64, 0.4),
+      rgba(148,163,184,1),
+      rgba(52, 56, 64, 0.4),
+      rgba(0, 4, 9, 0)
+    );
+  }
+  .side-title{
+    margin: 0 0 1px 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: .2px;
   }
 
-  .fixed-text-section p {
-    margin: 8px 0;
-    font-size: 13px;
+  .btn-row{
+    display:flex;
+    gap: 1px;
+    flex-wrap: wrap;
   }
-
-  .fixed-text-section p strong {
-    font-size: 22px;               /* Larger name text */
-    font-weight: bold;
-    color: #2c3e50;                /* Darker color for better visibility */
-  }
-
-  .fixed-text-section a {
-    color: blue;                 /* Use default link color */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
     text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   }
-
-  .fixed-text-section a:hover {
+  .btn:hover{
+    transform: translateY(-1px);
+    box-shadow: none;
+    background: transparent;
     text-decoration: underline;
   }
 
-  /* Main content styling */
-  .main-content {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 0 20px;
+  /* Main column cards */
+  .content{ min-width:0; }
+
+  .card{
+    background: rgba(255,255,255,.86);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231,231,239,.95);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(17, 24, 39, .10);
+  }
+
+  /* Hero-style card background like homepage */
+  .hero{
+    padding: 18px 20px;
+    position: relative;
+    overflow:hidden;
     text-align: left;
   }
-
-  .main-content h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background: linear-gradient(135deg, rgba(110,168,254,.16), rgba(172,102,215,.18));
+    filter: blur(17px);
+    opacity: .96;
+    z-index:0;
   }
+  .hero > *{ position: relative; z-index:1; }
 
-  .main-content p {
+  .sec-title{
+    margin: 0 0 10px 0;
     font-size: 18px;
-    line-height: 1.4;
-    color: #333;
-    margin-bottom: 15px;
+    font-weight: 900;
+    color: var(--accent);
+    padding-bottom: 0;
+    border-bottom: none;
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 6px 14px rgba(172,102,215,.18);
   }
 
   .profile-text {
-    flex: 1;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #333;
   }
 
-  /* Responsive behavior for smaller screens */
-  @media (max-width: 768px) {
-    body {
-      margin-left: 0;               /* Remove left margin on mobile */
-    }
-    
-    .profile-photo {
-      position: static;
-      transform: none;
-      width: 150px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    
-    .border-line {
-      display: none;
-    }
-    
-    .fixed-text-section {
-      position: static;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    
-    .main-content {
-      padding: 0 20px;
-    }
+  /* Make headings inside content match Research page heading size */
+  .profile-text h2,
+  .profile-text h3,
+  .profile-text h4,
+  .profile-text h5 {
+    font-size: 20px;
+  }
+
+  /* Underline only the subsection titles inside the content area */
+  .profile-text .sec-title{
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(221,221,221,1);
+  }
+
+  /* Ensure paragraphs and list items match homepage lead text size,
+     even if inline styles are present in Markdown */
+  .profile-text p,
+  .profile-text li {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: rgba(31,41,55,.95) !important;
+  }
+
+  @media (max-width: 950px){
+    .page-wrap{ grid-template-columns: 1fr; }
+    .sidebar{ position: relative; top:auto; }
   }
 </style>
 
-<!-- Fixed profile image -->
-<img
-  class="profile-photo"
-  src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
-  alt="Personal Image"
-/>
+<nav class="top-nav">
+  <a href="{{ "/" | absolute_url }}">Home</a>
+  <a href="{{ "/Research" | absolute_url }}">Research</a>
+  <a href="{{ "/publications" | absolute_url }}">Lead Paper</a>
+  <a href="{{ "/About me" | absolute_url }}">About me</a>
+</nav>
 
-<!-- Gray border line -->
-<div class="border-line"></div>
+<div class="page-wrap">
 
-<!-- Fixed text section in left region -->
-<div class="fixed-text-section">
-  <h3> </h3>
-  <p><img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="Name Icon" style="width: 20px; height: 20px; vertical-align: baseline; display: inline-block;"><strong>Zirui Zhang | 张子睿</strong></p>
-  <p>Physics Major<br>Sichuan University</p>
-  
-  <h3>Interests</h3>
-  <p>High Energy Astronomy<br>Tidal Disruption Events<br>Host Galaxy Analysis</p>
-  
-  <h3>Contact</h3>
-  <p>
-    <a href="mailto:929cosmo_zhangzirui@gmail.com" target="_blank">Email</a><br>
-    <a href="https://github.com/ZAKIRAM0" target="_blank">GitHub</a><br>
-  </p>
-  
-  <h3>Visitor Map</h3>
-  <div style="width: 80px; height: 80px; margin: 0 auto;">
-      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
-  </div>
+  <!-- Sidebar copied from homepage -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="side-top">
+        <img
+          class="avatar"
+          src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
+          alt="Zirui Zhang"
+        />
+      </div>
+
+      <div class="side-body">
+        <div class="name-row">
+          <img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="icon">
+          <div class="name">Zirui Zhang | 张子睿</div>
+        </div>
+
+        <div class="sub">
+          Physics Major<br>
+          Sichuan University
+        </div>
+
+        <div class="side-block">
+          <div class="side-title">Contact</div>
+          <div class="btn-row">
+            <a class="btn" href="mailto:929cosmozhangzirui@gmail.com">929cosmozhangzirui[at]gmail[dot]com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content" role="main">
+    {% if page.permalink == "/Research" %}
+      {{ content }}
+    {% else %}
+      <section class="card hero">
+        <h2 class="sec-title">{{ page.title }}</h2>
+        <div class="profile-text">
+          {{ content }}
+        </div>
+      </section>
+    {% endif %}
+  </main>
+
 </div>
-
-<main class="main-content" role="main">
-    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="post-header short-diver">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>           
-        </header>
-        <section class="post-content short-diver" itemprop="articleBody">
-            {{content}}
-        </section>
-    </article>
-</main>
 
 {% include photoswipe.html %}
 {% include post_scripts.html %}
