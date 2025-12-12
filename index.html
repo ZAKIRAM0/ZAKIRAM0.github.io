@@ -28,7 +28,7 @@ layout: default
     margin: 28px auto 60px;
     padding: 0 18px;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 240px 1fr; /* narrower sidebar */
     gap: 22px;
     align-items: start;
   }
@@ -46,7 +46,7 @@ layout: default
   }
 
   .side-top{
-    padding: 14px;
+    padding: 12px;
     background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
     border-bottom: 1px solid rgba(231,231,239,.9);
   }
@@ -64,7 +64,7 @@ layout: default
     box-shadow: 0 14px 34px rgba(0,0,0,.12);
   }
 
-  .side-body{ padding: 14px 16px 16px; }
+  .side-body{ padding: 12px 14px 14px; }
 
   .name-row{
     display:flex; align-items:center; gap:8px;
@@ -72,13 +72,13 @@ layout: default
   }
   .name-row img{ width: 18px; height: 18px; }
   .name{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
     letter-spacing: .2px;
   }
   .sub{
     margin-top: 6px;
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--muted);
     line-height: 1.4;
   }
@@ -90,50 +90,50 @@ layout: default
     gap: 8px;
   }
   .pill{
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 700;
     color: rgba(31,41,55,.92);
-    padding: 6px 10px;
+    padding: 6px 9px;
     border-radius: 999px;
     border: 1px solid rgba(231,231,239,.9);
     background: rgba(255,255,255,.75);
   }
 
   .side-block{
-    margin-top: 14px;
-    padding-top: 12px;
+    margin-top: 12px;
+    padding-top: 10px;
     border-top: 1px solid rgba(231,231,239,.9);
   }
   .side-title{
     margin: 0 0 8px 0;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 800;
     color: var(--accent);
     letter-spacing: .2px;
   }
   .side-block p{
     margin: 0;
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--text);
     line-height: 1.55;
   }
 
   .btn-row{
     display:flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .btn{
     display:inline-flex;
     align-items:center;
     gap: 8px;
-    padding: 8px 11px;
+    padding: 8px 10px;
     border-radius: 12px;
     border: 1px solid rgba(231,231,239,.95);
     background: rgba(255,255,255,.85);
     color: var(--accent);
     font-weight: 800;
-    font-size: 13px;
+    font-size: 12.5px;
     text-decoration: none;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   }
@@ -145,8 +145,8 @@ layout: default
   }
 
   .visitor{
-    width: 130px;
-    height: 130px;
+    width: 110px;  /* smaller to match narrower sidebar */
+    height: 110px;
     margin: 6px auto 0;
     display:flex;
     align-items:center;
@@ -250,7 +250,7 @@ layout: default
   }
   .timeline li{
     display:grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 96px 1fr; /* slightly narrower date column */
     gap: 10px;
     align-items:start;
     padding: 10px 12px;
