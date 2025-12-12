@@ -1,8 +1,9 @@
 .author-cover {
-    height: 20rem;
+    height: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: none;
 }
 
 .author-image {
