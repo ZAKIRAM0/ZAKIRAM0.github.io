@@ -2,234 +2,414 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <title>HomePage</title>
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 250px;            /* Add left margin to account for fixed image */
+  :root{
+    --accent:#ac66d7;
+    --accent2:#6ea8fe;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --bg:#fbfbfd;
+    --card:#ffffff;
+    --border:#e7e7ef;
+    --shadow: 0 10px 30px rgba(17, 24, 39, .07);
+    --radius:16px;
   }
 
-  /* Make cover image taller */
-  .main-header {
-    padding-top: 12rem !important;  /* Increase from 8rem to 12rem for taller cover */
+  body{
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(172,102,215,.14), transparent 55%),
+                radial-gradient(900px 500px at 90% 0%, rgba(110,168,254,.12), transparent 50%),
+                var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   }
 
-  /* Center every H2, full‑width */
-  h2 {
-    display: block;
+  .page-wrap{
+    max-width: 1140px;
+    margin: 28px auto 60px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{ position: sticky; top: 22px; }
+
+  .sidebar-card{
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231,231,239,.9);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .side-top{
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(172,102,215,.16), rgba(110,168,254,.14));
+    border-bottom: 1px solid rgba(231,231,239,.9);
+  }
+
+  .avatar{
     width: 100%;
-    text-align: center;
-    margin: 40px 0;
-  }
-
-  /* Container for intro row - centered content */
-  .intro-row {
+    border-radius: 14px;
     display: block;
-    max-width: 920px;
-    margin: 0 auto 60px;           /* center the container itself */
-    padding: 0 20px;               /* Remove left padding, keep normal padding */
+    box-shadow: 0 10px 26px rgba(0,0,0,.10);
+    transform: translateZ(0);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .sidebar-card:hover .avatar{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.12);
   }
 
-  /* Fixed photo in top-left corner */
-  .profile-photo {
-    position: fixed;
-    top: 20px;
-    left: 15px;
-    transform: none;
-    width: 220px;                  /* Larger size for more prominence */
-    height: auto;
-    border-radius: 10px;
-    z-index: 1000;                 /* Ensure it stays on top */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
-  }
+  .side-body{ padding: 14px 16px 16px; }
 
-  /* Gray border line to separate fixed section */
-  .border-line {
-    position: fixed;
-    top: 0;
-    left: 250px;                   /* Position right next to the image */
-    width: 5px;                   /* Border thickness */
-    height: 10000px;               /* Very tall to cover entire website */
-    background-color: #d3d3d3;     /* Light gray color */
-    z-index: 999;                  /* Behind the image but above content */
+  .name-row{
+    display:flex; align-items:center; gap:8px;
+    margin-top: 8px;
   }
-
-  /* Fixed text section in left region */
-  .fixed-text-section {
-    position: fixed;
-    top: 320px;                    /* Position below the profile image */
-    left: 15px;                    /* Align with the image */
-    width: 220px;                  /* Same width as the image */
-    z-index: 1000;                 /* Same level as the image */
-    color: #333;                   /* Dark text color */
-    font-size: 10px;
+  .name-row img{ width: 18px; height: 18px; }
+  .name{
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .2px;
+  }
+  .sub{
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--muted);
     line-height: 1.4;
   }
 
-  .fixed-text-section h3 {
-    margin: 0 0 10px 0;
-    font-size: 15px;
-    color: #ac66d7;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+  .pill-row{
+    margin-top: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pill{
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(31,41,55,.92);
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(231,231,239,.9);
+    background: rgba(255,255,255,.75);
   }
 
-  .fixed-text-section p {
-    margin: 8px 0;
+  .side-block{
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(231,231,239,.9);
+  }
+  .side-title{
+    margin: 0 0 8px 0;
     font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: .2px;
+  }
+  .side-block p{
+    margin: 0;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.55;
   }
 
-  .fixed-text-section p strong {
-    font-size: 22px;               /* Larger name text */
-    font-weight: bold;
-    color: #2c3e50;                /* Darker color for better visibility */
+  .btn-row{
+    display:flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
-
-  .fixed-text-section a {
-    color: blue;                 /* Use default link color */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 8px 11px;
+    border-radius: 12px;
+    border: 1px solid rgba(231,231,239,.95);
+    background: rgba(255,255,255,.85);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(17,24,39,.08);
+    background: rgba(255,255,255,.96);
     text-decoration: none;
   }
 
-  .fixed-text-section a:hover {
-    text-decoration: underline;
+  .visitor{
+    width: 130px;
+    height: 130px;
+    margin: 6px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(231,231,239,.95);
+    background: rgba(255,255,255,.9);
   }
 
-  .profile-text {
-    flex: 1;
-    text-align: left;
+  /* ---------- Main ---------- */
+  .content{ min-width:0; }
+
+  .card{
+    background: rgba(255,255,255,.86);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(231,231,239,.95);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(17, 24, 39, .10);
+  }
+
+  .hero{
+    padding: 18px 20px;
+    position: relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background: linear-gradient(135deg, rgba(172,102,215,.14), rgba(110,168,254,.12));
+    filter: blur(18px);
+    opacity: .9;
+    z-index:0;
+  }
+  .hero > *{ position: relative; z-index:1; }
+
+  .hero-title{
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: .2px;
+  }
+  .lead{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(31,41,55,.95);
+  }
+
+  .tag-row{
+    margin-top: 12px;
+    display:flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag{
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: rgba(31,41,55,.92);
+    border: 1px solid rgba(231,231,239,.95);
+    background: rgba(255,255,255,.8);
+  }
+  .tag.purple{ border-color: rgba(172,102,215,.35); background: rgba(172,102,215,.10); }
+  .tag.blue{ border-color: rgba(110,168,254,.35); background: rgba(110,168,254,.10); }
+
+  .sec-title{
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--accent);
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(231,231,239,.95);
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 6px 14px rgba(172,102,215,.18);
+  }
+
+  .timeline{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    gap: 10px;
+  }
+  .timeline li{
+    display:grid;
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+    align-items:start;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(231,231,239,.95);
+    background: rgba(255,255,255,.75);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .timeline li:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(17,24,39,.08);
+  }
+
+  .date{
+    color: var(--muted);
+    font-weight: 800;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .item{
+    font-size: 14px;
     line-height: 1.6;
   }
-  a {
-    color: #ac66d7;
-    text-decoration: underline;
-  }
-  .name {
-    margin-bottom: 0.3em;
-  }
+  .item em{ font-style: italic; }
 
-  /* Responsive behavior for smaller screens */
-  @media (max-width: 768px) {
-    body {
-      margin-left: 0;               /* Remove left margin on mobile */
-    }
-    
-    .profile-photo {
-      position: static;
-      transform: none;
-      width: 150px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    
-    .intro-row {
-      padding: 0 20px;
-    }
+  @media (max-width: 950px){
+    .page-wrap{ grid-template-columns: 1fr; }
+    .sidebar{ position: relative; top:auto; }
   }
 </style>
 
-</head>
+<div class="page-wrap">
 
-<body>
-
-  <!-- Gray border line -->
-  <div class="border-line"></div>
-
-  <!-- Fixed text section in left region -->
-  <div class="fixed-text-section">
-    <h3> </h3>
-    <p><img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="Name Icon" style="width: 20px; height: 20px; vertical-align: baseline; display: inline-block;"><strong>Zirui Zhang | 张子睿</strong></p>
-      <p>Physics Major<br>Sichuan University</p>
-    
-    <h3>Interests</h3>
-    <p>High Energy Astrophysics<br>Time Domain Astronomy</p>
-    
-    <h3>Contact</h3>
-    <p>
-      <a href="mailto:929cosmozhangzirui@gmail.com" target="_blank">Email</a><br>
-      <a href="https://github.com/ZAKIRAM0" target="_blank">GitHub</a><br>
-    </p>
-    
-    <h3>Visitor Map</h3>
-    <div style="width: 80px; height: 80px; margin: 0 auto;">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
-    </div>
-  </div>
-
-  <!-- Hi heading stays centered
-  <h2>====== Hi~ ======</h2> -->
-
-  <!-- Flex container: photo on left, text on right -->
-  <div class="intro-row">
-    <img
-      class="profile-photo"
-      src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
-      alt="Personal Image"
-    />
-
-    <div class="profile-text">
-      <!-- General Introduction -->
-      <p style="font-size: 17px; line-height: 1.4; color: #333;">
-        Hi! I am a senior undergraduate student majoring in Physics at SCU.
-        <br>
-        My research interests lie in time-domain astronomy and high-energy astrophysics, with a primary focus on tidal disruption events (TDEs), also interested in other transients such as GRBs, FRBs, FBOTs and SNe. <br>
-        Besides, I am also broadly interested in AI for astronomy and compact-object systems (including black holes, neutron stars, and binary mergers).
-        <br>
-        I'm always open to discussing interesting ideas — feel free to reach out!
-      </p>
-
-      <!-- News Section -->
-      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🔥 News</h3>
-      <p style="font-size: 15px; line-height: 1.4; color: #333;">
-        <em>2025 - 2026</em> Undergrad Thesis: <em>The nature and origins of long-duration high-energy transients</em>, in progress!<br>
-        <em>2025</em>&nbsp;&nbsp;&nbsp;Coming first lead paper: <em>eROSITA-RU Tidal Disruption Events with Keck-I/LRIS: Sample Selection, Optical Properties, and Host Galaxy Demographics</em>, Submitted to A&A in December<br>
-
-        <em>2025.09</em>&nbsp;&nbsp;&nbsp;Submitted <em>On the Ultra-Long Gamma-Ray Transient GRB 250702B/EP250702</em> to ApJL!
-      </p>
-
-      <!-- Education Section -->
-      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">
-        📖 Education
-      </h3>
-
-      <div style="font-size: 15px; line-height: 1.4; color: #333;">
-
-        <div style="display: flex; justify-content: space-between;">
-          <em>2025.01 – 2025.08</em>
-          <span>Exchange Student, University of California, Berkeley, USA</span>
-        </div>
-
-        <div style="display: flex; justify-content: space-between;">
-          <em>2022.09 – 2026.06</em>
-          <span>B.S. in Physics, College of Physics and Wu Yuzhang Honors College, Sichuan University, China</span>
-        </div>
-
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="side-top">
+        <img
+          class="avatar"
+          src="{{ '/assets/page/Me.jpeg' | absolute_url }}"
+          alt="Zirui Zhang"
+        />
       </div>
 
-      <!-- Research Experience Section -->
-      <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🛰️ Research Experience</h3>
-      <p style="font-size: 15px; line-height: 1.4; color: #333;">
-        <em>2025.01 - Present</em> &nbsp;&nbsp;&nbsp;TRex Group, UC Berkeley, USA         <br>
-        <em>2024.06 - Present</em> &nbsp;&nbsp;&nbsp;GECAM Group, Institute of High Energy Physics(IHEP), Chinese Academy of Sciences, China            <br>
-        <em>2024.05 - 2024.10 </em> &nbsp;&nbsp;&nbsp;LHAASO Group, Institute of High Energy Physics(IHEP), Chinese Academy of Sciences, China             <br>
-        <em>2023.04 - 2023.12</em> &nbsp;&nbsp;&nbsp;Sichuan University, China
+      <div class="side-body">
+        <div class="name-row">
+          <img src="{{ '/assets/page/alien.png' | absolute_url }}" alt="icon">
+          <div class="name">Zirui Zhang | 张子睿</div>
+        </div>
 
+        <div class="sub">
+          Physics Major<br>
+          Sichuan University
+        </div>
 
+        <div class="pill-row">
+          <span class="pill">Time-domain</span>
+          <span class="pill">High-energy</span>
+          <span class="pill">Transients</span>
+        </div>
+
+        <div class="side-block">
+          <div class="side-title">Interests</div>
+          <p>TDEs • GRBs • FRBs • Compact Objects<br>AI for Astronomy (Exploring)</p>
+        </div>
+
+        <div class="side-block">
+          <div class="side-title">Contact</div>
+          <div class="btn-row">
+            <a class="btn" href="mailto:929cosmozhangzirui@gmail.com">Email</a>
+            <a class="btn" href="https://github.com/ZAKIRAM0" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="side-block">
+          <div class="side-title">Visitor Map</div>
+          <div class="visitor">
+            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </aside>
 
+  <!-- Main -->
+  <main class="content">
 
-</body>
-</html>
+    <section class="card hero">
+      <h2 class="hero-title">Hi! 👋</h2>
+      <p class="lead">
+        I am a senior undergraduate student majoring in Physics at SCU.<br>
+        My interests lie in time-domain astronomy and high-energy astrophysics, with a primary focus on tidal disruption events (TDEs).
+        I’m also interested in other transients such as GRBs, FRBs, FBOTs, and SNe.<br>
+        Beyond that, I’m curious about compact-object systems (black holes, neutron stars, and binary mergers) and the potential of AI for astronomy.<br>
+        I’m always open to discussing interesting ideas — feel free to reach out!
+      </p>
+
+      <div class="tag-row">
+        <span class="tag purple">TDEs</span>
+        <span class="tag purple">Nuclear Transients</span>
+        <span class="tag blue">Multi-messenger</span>
+        <span class="tag blue">Survey Astronomy</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3 class="sec-title"><span class="dot"></span>🔥 News</h3>
+      <ul class="timeline">
+        <li>
+          <div class="date">2025–2026</div>
+          <div class="item">Undergrad Thesis: <em>The nature and origins of long-duration high-energy transients</em> (in progress).</div>
+        </li>
+        <li>
+          <div class="date">2025.12</div>
+          <div class="item">First-lead paper: <em>eROSITA-RU Tidal Disruption Events with Keck-I/LRIS: Sample Selection, Optical Properties, and Host Galaxy Demographics</em>, submitted to A&amp;A.</div>
+        </li>
+        <li>
+          <div class="date">2025.09</div>
+          <div class="item">Submitted <em>On the Ultra-Long Gamma-Ray Transient GRB 250702B/EP250702</em> to ApJL.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3 class="sec-title"><span class="dot"></span>📖 Education</h3>
+      <ul class="timeline">
+        <li>
+          <div class="date">2025.01–2025.08</div>
+          <div class="item">Exchange Student, University of California, Berkeley, USA</div>
+        </li>
+        <li>
+          <div class="date">2022.09–2026.06</div>
+          <div class="item">B.S. in Physics, College of Physics &amp; Wu Yuzhang Honors College, Sichuan University, China</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3 class="sec-title"><span class="dot"></span>🛰️ Research Experience</h3>
+      <ul class="timeline">
+        <li>
+          <div class="date">2025.01–Present</div>
+          <div class="item">TRex Group, UC Berkeley, USA</div>
+        </li>
+        <li>
+          <div class="date">2024.06–Present</div>
+          <div class="item">GECAM Group, Institute of High Energy Physics (IHEP), Chinese Academy of Sciences, China</div>
+        </li>
+        <li>
+          <div class="date">2024.05–2024.10</div>
+          <div class="item">LHAASO Group, Institute of High Energy Physics (IHEP), Chinese Academy of Sciences, China</div>
+        </li>
+        <li>
+          <div class="date">2023.04–2023.12</div>
+          <div class="item">Sichuan University, China</div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+</div>
