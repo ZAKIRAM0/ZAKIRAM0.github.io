@@ -21,6 +21,19 @@ menutitle: Research
     <li><strong>Jets and extreme events:</strong> why a small fraction of TDEs launch relativistic jets and produce very high-energy emission.</li>
   </ul>
 
+  <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">Binary Systems & Compact Objects</h3>
+  <p style="font-size: 15px; line-height: 1.4; color: #333; margin: 0 0 8px 0;">
+    I’m also fascinated by compact objects and the transients produced by neutron stars and black holes.
+  </p>
+  <ul style="font-size: 15px; line-height: 1.4; color: #333; padding-left: 18px; margin: 0;">
+    <li><strong>Black holes and neutron stars:</strong> their formation, extreme environments, and how we can learn about them through short-lived transients.</li>
+    <li><strong>NS–BH mergers:</strong> when a neutron star is disrupted (vs swallowed) and how that changes the expected signals.</li>
+    <li><strong>Kilonovae:</strong> the glow from neutron-star mergers and what it reveals about heavy-element production.</li>
+    <li><strong>Jets and afterglows:</strong> how gamma-ray bursts and afterglows depend on jet structure and viewing angle.</li>
+    <li><strong>Post-merger remnants:</strong> how long a massive neutron star survives and how that shapes the ejecta and emission.</li>
+    <li><strong>FRBs and magnetars:</strong> what powers fast radio bursts and what environments they prefer.</li>
+  </ul>
+
   <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">Galaxy</h3>
   <p style="font-size: 15px; line-height: 1.4; color: #333; margin: 0 0 8px 0;">
     I’m also interested in what host galaxies can tell us about where nuclear transients happen and why.
@@ -31,18 +44,6 @@ menutitle: Research
     <li><strong>Dust and hidden activity:</strong> how gas and dust can change what a nuclear flare looks like across wavelengths.</li>
     <li><strong>Impact on the surroundings:</strong> whether a short flare can leave a noticeable imprint on gas near the galaxy center.</li>
     <li><strong>Little Red Dots (JWST):</strong> very compact, dusty high-redshift galaxies that may host fast-growing black holes.</li>
-  </ul>
-
-  <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">Binary Systems & Compact Objects</h3>
-  <p style="font-size: 15px; line-height: 1.4; color: #333; margin: 0 0 8px 0;">
-    Beyond galactic nuclei, I’m fascinated by compact objects and the transients produced by neutron stars and black holes.
-  </p>
-  <ul style="font-size: 15px; line-height: 1.4; color: #333; padding-left: 18px; margin: 0;">
-    <li><strong>Kilonovae:</strong> the glow from neutron-star mergers and what it reveals about heavy-element production.</li>
-    <li><strong>Jets and afterglows:</strong> how gamma-ray bursts and afterglows depend on jet structure and viewing angle.</li>
-    <li><strong>NS–BH mergers:</strong> when a neutron star is disrupted (vs swallowed) and how that changes the expected signals.</li>
-    <li><strong>Post-merger remnants:</strong> how long a massive neutron star survives and how that shapes the ejecta and emission.</li>
-    <li><strong>FRBs and magnetars:</strong> what powers fast radio bursts and what environments they prefer.</li>
   </ul>
 
   <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">AI for Astronomy</h3>
