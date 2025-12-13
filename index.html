@@ -24,6 +24,9 @@ layout: default
   .top-nav a:hover{
     color: var(--accent);
   }
+  .top-nav a.active{
+    color: var(--accent);
+  }
 
   :root{
     --accent:#ac66d7;
@@ -330,7 +333,7 @@ layout: default
 </style>
 
 <nav class="top-nav">
-  <a href="{{ "/" | absolute_url }}">Home</a>
+  <a class="active" href="{{ "/" | absolute_url }}">Home</a>
   <a href="{{ "/Research" | absolute_url }}">Research</a>
     <a href="{{ "/publications" | absolute_url }}">Lead Paper</a>
   <a href="{{ "/About me" | absolute_url }}">About me</a>
