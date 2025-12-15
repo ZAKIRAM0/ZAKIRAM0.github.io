@@ -70,7 +70,8 @@ menutitle: Publication
 	<article class="pub-entry">
 		<h2 class="pub-title">eROSITA-RU Tidal Disruption Events with Keck-I/LRIS: Sample Selection, Optical Properties, and Host Galaxy Demographics</h2>
 		<div class="pub-meta">
-			2025 - UC Berkeley, TRex Team, <strong>Supervisor:</strong> <a href="https://yaoyuhan.github.io/">Yuhan Yao</a>
+			2025 - UC Berkeley, TRex Team <br>
+            <strong>Supervisor:</strong> <a href="https://yaoyuhan.github.io/">Yuhan Yao</a>
 		</div>
 
 		<p>
