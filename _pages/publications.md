@@ -2,7 +2,7 @@
 layout:    page-with-sidebar
 permalink: "/publications"
 weight:    3
-menutitle: Lead_Paper
+menutitle: Publication
 ---
 <div style="width: 100%;">
 <h2>eROSITA-RU Tidal Disruption Events with Keck-I/LRIS: Sample Selection, Optical Properties, and Host Galaxy Demographics</h2>
