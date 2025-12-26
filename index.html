@@ -194,16 +194,16 @@ layout: default
   }
 
   .visitor{
-    width: 110px;  /* smaller to match narrower sidebar */
-    height: 110px;
+    width: 90px;  /* reduced size */
+    height: 90px;
     margin: 6px auto 0;
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    border-radius: 14px;
-    border: 1px solid rgba(231,231,239,.95);
-    background: rgba(255,255,255,.9);
+    border-radius: 8px;
+    border: none; /* remove white border box */
+    background: transparent; /* remove white background */
   }
 
   /* ---------- Main ---------- */
@@ -374,7 +374,6 @@ layout: default
 
         
         <div class="side-block">
-          <div class="side-title">Visitor Map</div>
           <div class="visitor">
             <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=IC4ia-l5SILJRKxpuqqfY8qV_65HuG1YKESP7lzZQs8"></script>
           </div>
