@@ -186,6 +186,14 @@ layout: default
     text-decoration: none;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   }
+  /* Version block: hide title, stack links vertically, center them, smaller gap */
+  .version-block .side-title{ display: none; }
+  .version-block .btn-row{
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+  .version-block .btn{ justify-content: center; padding: 4px 8px; font-size: 13px; line-height: 1; margin: 0; }
   .btn:hover{
     transform: translateY(-1px);
     box-shadow: none;
@@ -364,12 +372,12 @@ layout: default
         </div>
 
 
-        <div class="side-block">
-          <div class="side-title"></div>
+        <div class="side-block version-block">
+          <div class="side-title">Version</div>
           <div class="btn-row">
+            <a class="btn" href="https://scholar.google.com/citations?user=vajP8RkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
             <a class="btn" href="https://orcid.org/0009-0002-6624-4588" target="_blank" rel="noopener">ORCID</a>
             <!-- <a class="btn" href="https://inspirehep.net/authors/3098327" target="_blank" rel="noopener">InSPIRE</a> -->
-            <a class="btn" href="https://scholar.google.com/citations?user=vajP8RkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
           </div>
         </div>
 
@@ -417,7 +425,7 @@ layout: default
       <h3 class="sec-title"><span class="dot"></span>🔥 News</h3>
       <ul class="timeline">
         <li>
-          <div class="date">2025–2026</div>
+          <div class="date">2026</div>
           <div class="item">Undergrad Thesis: <em>The nature and origins of long-duration high-energy transients</em> | In progress.</div>
         </li>
         <li>
