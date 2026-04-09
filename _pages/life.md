@@ -8,7 +8,7 @@ menutitle: About me
 <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">✨ Hobbies</h3>
 <p style="font-size: 15px; line-height: 1.4; color: #333;">
 Music <br>
-Read: Chinese history, philosophy<br>
+Read: Chinese history, archaeology, Daoist philosophy<br>
 Sports: badmiton, hiking, ping-pong
 
 </p>
@@ -17,7 +17,7 @@ Sports: badmiton, hiking, ping-pong
 <div class="profile-text">
 <h3 style="font-size: 15px; color: #ac66d7; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin: 20px 0 10px 0;">🌊 Where I'm From</h3>
 <p style="font-size: 15px; line-height: 1.4; color: #333;">
-I originally come from Pengshan(彭山), a serene district of Meishan(眉山) in Sichuan(四川) Province — the hometown of Su Dongpo(苏东坡), one of the Chinese greatest poets, also the poet who influences my character the most. Growing up in this naturally and culturally rich land, I later moved to Beijing(北京) at the age of 10.
+I originally come from Pengshan(彭山), a serene district of Meishan(眉山) in Sichuan(四川) Province. It's also the hometown of Su Dongpo(苏东坡), one of China's greatest poets, who also shaped my character more than any other. Growing up in this naturally and culturally rich land, I later moved to Beijing(北京) at the age of 10.
 </p>
 </div>
 
