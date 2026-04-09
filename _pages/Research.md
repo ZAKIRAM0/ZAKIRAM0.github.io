@@ -68,7 +68,7 @@ menutitle: Research
       <span class="dot"></span>AI for Astronomy
     </h3>
     <p style="font-size: 15px; line-height: 1.4; color: #333; margin: 0 0 8px 0;">
-      I’m also curious about how AI can help astronomers discover and understand rare events in the era of surveys and also case study. I’m  learning ML right now and hope to explore it more during my PhD.
+      I’m also curious about how AI can help astronomers discover and understand rare events in the era of surveys and also case study. 
     </p>
   </div>
 </section>
